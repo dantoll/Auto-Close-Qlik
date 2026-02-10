@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Close Idle Qlik Tabs",
+  "version": "1.0",
+  "description": "Sluit Qlik Cloud tabs na inactiviteit",
+  "permissions": ["tabs"],
+  "host_permissions": [
+    "https://oranjegroep.eu.qlikcloud.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://oranjegroep.eu.qlikcloud.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
